@@ -1,0 +1,126 @@
+1:
+Store the SHA for the latest commit (SHA-LATEST-COMMIT)
+
+curl -H "Authorization: token 8f9d2fb2521eb2a5316695a025906e42b65e0790" https://api.github.com/repos/zhanghuabin/hackathon-box-github/git/refs/heads/master
+
+{
+  "ref": "refs/heads/master",
+  "url": "https://api.github.com/repos/zhanghuabin/hackathon-box-github/git/refs/heads/master",
+  "object": {
+    "sha": "867d6734f7bef14ded3347547af8fb1df98aca2d",
+    "type": "commit",
+    "url": "https://api.github.com/repos/zhanghuabin/hackathon-box-github/git/commits/867d6734f7bef14ded3347547af8fb1df98aca2d"
+  }
+}
+
+
+2:
+Store the SHA for the tree (SHA-BASE-TREE)
+
+curl -H "Authorization: token 8f9d2fb2521eb2a5316695a025906e42b65e0790" https://api.github.com/repos/zhanghuabin/hackathon-box-github/git/commits/867d6734f7bef14ded3347547af8fb1df98aca2d
+
+{
+  "sha": "867d6734f7bef14ded3347547af8fb1df98aca2d",
+  "url": "https://api.github.com/repos/zhanghuabin/hackathon-box-github/git/commits/867d6734f7bef14ded3347547af8fb1df98aca2d",
+  "html_url": "https://github.com/zhanghuabin/hackathon-box-github/commit/867d6734f7bef14ded3347547af8fb1df98aca2d",
+  "author": {
+    "name": "Huabin Zhang",
+    "email": "huabinzhang@yahoo.com",
+    "date": "2014-05-30T02:53:20Z"
+  },
+  "committer": {
+    "name": "Huabin Zhang",
+    "email": "huabinzhang@yahoo.com",
+    "date": "2014-05-30T02:53:20Z"
+  },
+  "tree": {
+    "sha": "1c09a29773c1af784b9a0806d5e08af3b55418ec",
+    "url": "https://api.github.com/repos/zhanghuabin/hackathon-box-github/git/trees/1c09a29773c1af784b9a0806d5e08af3b55418ec"
+  },
+  "message": "Initial commit",
+  "parents": [
+
+  ]
+}
+
+
+3:
+Set base_tree to be SHA-BASE-TREE
+Set path to be the full path of the file you are creating or editing
+Set content to be the full contents of the file
+From the response, get the top-level SHA (SHA-NEW-TREE)
+
+curl -d '{"base_tree":"1c09a29773c1af784b9a0806d5e08af3b55418ec","tree":[{"path":"test.txt","mode":"100644","content":"OKOK"}]}' -H "Authorization: token 8f9d2fb2521eb2a5316695a025906e42b65e0790" https://api.github.com/repos/zhanghuabin/hackathon-box-github/git/trees
+
+{
+  "sha": "37930c584534ad8301eda44bd744f026d5daf7dc",
+  "url": "https://api.github.com/repos/zhanghuabin/hackathon-box-github/git/trees/37930c584534ad8301eda44bd744f026d5daf7dc",
+  "tree": [
+    {
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad410e11302107da9aa47ce3d46bd5ad011c4c43",
+      "path": "LICENSE",
+      "size": 11323,
+      "url": "https://api.github.com/repos/zhanghuabin/hackathon-box-github/git/blobs/ad410e11302107da9aa47ce3d46bd5ad011c4c43"
+    },
+    {
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b42b0bbcd2127f9ca65c3e0eda27b2936e858773",
+      "path": "README.md",
+      "size": 42,
+      "url": "https://api.github.com/repos/zhanghuabin/hackathon-box-github/git/blobs/b42b0bbcd2127f9ca65c3e0eda27b2936e858773"
+    },
+    {
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e6bc70f110377d05be82d1026a8c7fe583dfb32b",
+      "path": "test.txt",
+      "size": 4,
+      "url": "https://api.github.com/repos/zhanghuabin/hackathon-box-github/git/blobs/e6bc70f110377d05be82d1026a8c7fe583dfb32b"
+    }
+  ]
+}
+
+
+4:
+Set parents to be an array containing SHA-LATEST-COMMIT
+Set tree to be SHA-NEW-TREE
+From the response, get the top-level SHA (SHA-NEW-COMMIT)
+
+curl -v -d '{"message":"my commit message","author":{"name":"Huabin Zhang","email":"digitarts@gmail.com","date":"2014-05-30T13:31:30+08:00"},"parents":["867d6734f7bef14ded3347547af8fb1df98aca2d"],"tree":"37930c584534ad8301eda44bd744f026d5daf7dc"}' -H "Authorization: token 8f9d2fb2521eb2a5316695a025906e42b65e0790" https://api.github.com/repos/zhanghuabin/hackathon-box-github/git/commits
+
+{
+  "sha": "93ad087db047da2b5eb202d2b97f3336501c518c",
+  "url": "https://api.github.com/repos/zhanghuabin/hackathon-box-github/git/commits/93ad087db047da2b5eb202d2b97f3336501c518c",
+  "html_url": "https://github.com/zhanghuabin/hackathon-box-github/commit/93ad087db047da2b5eb202d2b97f3336501c518c",
+  "author": {
+    "name": "Huabin Zhang",
+    "email": "digitarts@gmail.com",
+    "date": "2014-05-30T05:31:30Z"
+  },
+  "committer": {
+    "name": "Huabin Zhang",
+    "email": "digitarts@gmail.com",
+    "date": "2014-05-30T05:31:30Z"
+  },
+  "tree": {
+    "sha": "37930c584534ad8301eda44bd744f026d5daf7dc",
+    "url": "https://api.github.com/repos/zhanghuabin/hackathon-box-github/git/trees/37930c584534ad8301eda44bd744f026d5daf7dc"
+  },
+  "message": "my commit message",
+  "parents": [
+    {
+      "sha": "867d6734f7bef14ded3347547af8fb1df98aca2d",
+      "url": "https://api.github.com/repos/zhanghuabin/hackathon-box-github/git/commits/867d6734f7bef14ded3347547af8fb1df98aca2d",
+      "html_url": "https://github.com/zhanghuabin/hackathon-box-github/commit/867d6734f7bef14ded3347547af8fb1df98aca2d"
+    }
+  ]
+}
+
+
+5:
+Set sha to be SHA-NEW-COMMIT
+You may need to set force to be true
+

@@ -1,0 +1,301 @@
+[Huabin@huabin-y510p] [Fri May 30 13:11:33] /cygdrive/e/dev/content/projects/opensource/github/zhanghuabin/hackathon-box-github
+✔  (master) $> curl -v -d '{"base_tree":"1c09a29773c1af784b9a0806d5e08af3b55418ec","tree":[{"path":"test.txt","mode":"100644","content":"OKOK"}]}' -H "Authorization: token 8f9d2fb2521eb2a5316695a025906e42b65e0790" https://api.github.com/repos/zhanghuabin/hackathon-box-github/git/trees
+* STATE: INIT => CONNECT handle 0x8001f218; line 1011 (connection #-5000)
+* Hostname was NOT found in DNS cache
+*   Trying 192.30.252.137...
+* Adding handle: conn: 0x80069d68
+* Adding handle: send: 0
+* Adding handle: recv: 0
+* Curl_addHandleToPipeline: length: 1
+* 0x8001f218 is at send pipe head!
+* - Conn 0 (0x80069d68) send_pipe: 1, recv_pipe: 0
+* STATE: CONNECT => WAITCONNECT handle 0x8001f218; line 1058 (connection #0)
+* Connected to api.github.com (192.30.252.137) port 443 (#0)
+* successfully set certificate verify locations:
+*   CAfile: /usr/ssl/certs/ca-bundle.crt
+  CApath: none
+* SSLv3, TLS handshake, Client hello (1):
+* STATE: WAITCONNECT => PROTOCONNECT handle 0x8001f218; line 1171 (connection #0)
+* SSLv3, TLS handshake, Server hello (2):
+* SSLv3, TLS handshake, CERT (11):
+* SSLv3, TLS handshake, Server key exchange (12):
+* SSLv3, TLS handshake, Server finished (14):
+* SSLv3, TLS handshake, Client key exchange (16):
+* SSLv3, TLS change cipher, Client hello (1):
+* SSLv3, TLS handshake, Finished (20):
+* SSLv3, TLS change cipher, Client hello (1):
+* SSLv3, TLS handshake, Finished (20):
+* SSL connection using ECDHE-RSA-AES128-GCM-SHA256
+* Server certificate:
+*        subject: C=US; ST=California; L=San Francisco; O=GitHub, Inc.; CN=*.github.com
+*        start date: 2014-04-08 00:00:00 GMT
+*        expire date: 2017-04-12 12:00:00 GMT
+*        subjectAltName: api.github.com matched
+*        issuer: C=US; O=DigiCert Inc; OU=www.digicert.com; CN=DigiCert SHA2 High Assurance Server CA
+*        SSL certificate verify ok.
+* STATE: PROTOCONNECT => DO handle 0x8001f218; line 1190 (connection #0)
+> POST /repos/zhanghuabin/hackathon-box-github/git/trees HTTP/1.1
+> User-Agent: curl/7.34.0
+> Host: api.github.com
+> Accept: */*
+> Authorization: token 8f9d2fb2521eb2a5316695a025906e42b65e0790
+> Content-Length: 118
+> Content-Type: application/x-www-form-urlencoded
+>
+* upload completely sent off: 118 out of 118 bytes
+* STATE: DO => DO_DONE handle 0x8001f218; line 1263 (connection #0)
+* STATE: DO_DONE => WAITPERFORM handle 0x8001f218; line 1384 (connection #0)
+* STATE: WAITPERFORM => PERFORM handle 0x8001f218; line 1395 (connection #0)
+* HTTP 1.1 or later with persistent connection, pipelining supported
+< HTTP/1.1 201 Created
+* Server GitHub.com is not blacklisted
+< Server: GitHub.com
+< Date: Fri, 30 May 2014 05:15:04 GMT
+< Content-Type: application/json; charset=utf-8
+< Status: 201 Created
+< X-RateLimit-Limit: 5000
+< X-RateLimit-Remaining: 4992
+< X-RateLimit-Reset: 1401429075
+< Cache-Control: private, max-age=60, s-maxage=60
+< ETag: "6692761d5067ae5581d90b06e32c5ffb"
+< X-OAuth-Scopes: repo, user
+< X-Accepted-OAuth-Scopes:
+< Location: https://api.github.com/repos/zhanghuabin/hackathon-box-github/git/trees/37930c584534ad8301eda44bd744f026d5daf7dc
+< Vary: Accept, Authorization, Cookie, X-GitHub-OTP
+< X-GitHub-Media-Type: github.v3
+< X-XSS-Protection: 1; mode=block
+< X-Frame-Options: deny
+< Content-Security-Policy: default-src 'none'
+< Content-Length: 1063
+< Access-Control-Allow-Credentials: true
+< Access-Control-Expose-Headers: ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+< Access-Control-Allow-Origin: *
+< X-GitHub-Request-Id: 6A785762:7CF6:DFD9FD8:538813D8
+< Strict-Transport-Security: max-age=31536000
+< X-Content-Type-Options: nosniff
+<
+{
+  "sha": "37930c584534ad8301eda44bd744f026d5daf7dc",
+  "url": "https://api.github.com/repos/zhanghuabin/hackathon-box-github/git/trees/37930c584534ad8301eda44bd744f026d5daf7dc",
+  "tree": [
+    {
+      "mode": "100644",
+      "type": "blob",
+      "sha": "ad410e11302107da9aa47ce3d46bd5ad011c4c43",
+      "path": "LICENSE",
+      "size": 11323,
+      "url": "https://api.github.com/repos/zhanghuabin/hackathon-box-github/git/blobs/ad410e11302107da9aa47ce3d46bd5ad011c4c43"
+    },
+    {
+      "mode": "100644",
+      "type": "blob",
+      "sha": "b42b0bbcd2127f9ca65c3e0eda27b2936e858773",
+      "path": "README.md",
+      "size": 42,
+      "url": "https://api.github.com/repos/zhanghuabin/hackathon-box-github/git/blobs/b42b0bbcd2127f9ca65c3e0eda27b2936e858773"
+    },
+    {
+      "mode": "100644",
+      "type": "blob",
+      "sha": "e6bc70f110377d05be82d1026a8c7fe583dfb32b",
+      "path": "test.txt",
+      "size": 4,
+      "url": "https://api.github.com/repos/zhanghuabin/hackathon-box-github/git/blobs/e6bc70f110377d05be82d1026a8c7fe583dfb32b"
+    }
+  ]
+}
+* STATE: PERFORM => DONE handle 0x8001f218; line 1565 (connection #0)
+* Connection #0 to host api.github.com left intact
+[Huabin@huabin-y510p] [Fri May 30 13:15:03] /cygdrive/e/dev/content/projects/opensource/github/zhanghuabin/hackathon-box-github
+✔  (master) $> curl -v -d '{"message":"my commit message","author":{"name":"Huabin Zhang","email":"digitarts@gmail.com","date":"2014-05-30T13:31:30+08:00"},"parents":["867d6734f7bef14ded3347547af8fb1df98aca2d"],"tree":"37930c584534ad8301eda44bd744f026d5daf7dc"}' -H "Authorization: token 8f9d2fb2521eb2a5316695a025906e42b65e0790" https://api.github.com/repos/zhanghuabin/hackathon-box-github/git/commits
+* STATE: INIT => CONNECT handle 0x8001f218; line 1011 (connection #-5000)
+* Hostname was NOT found in DNS cache
+*   Trying 192.30.252.136...
+* Adding handle: conn: 0x80069dd8
+* Adding handle: send: 0
+* Adding handle: recv: 0
+* Curl_addHandleToPipeline: length: 1
+* 0x8001f218 is at send pipe head!
+* - Conn 0 (0x80069dd8) send_pipe: 1, recv_pipe: 0
+* STATE: CONNECT => WAITCONNECT handle 0x8001f218; line 1058 (connection #0)
+* Connected to api.github.com (192.30.252.136) port 443 (#0)
+* successfully set certificate verify locations:
+*   CAfile: /usr/ssl/certs/ca-bundle.crt
+  CApath: none
+* SSLv3, TLS handshake, Client hello (1):
+* STATE: WAITCONNECT => PROTOCONNECT handle 0x8001f218; line 1171 (connection #0)
+* SSLv3, TLS handshake, Server hello (2):
+* SSLv3, TLS handshake, CERT (11):
+* SSLv3, TLS handshake, Server key exchange (12):
+* SSLv3, TLS handshake, Server finished (14):
+* SSLv3, TLS handshake, Client key exchange (16):
+* SSLv3, TLS change cipher, Client hello (1):
+* SSLv3, TLS handshake, Finished (20):
+* SSLv3, TLS change cipher, Client hello (1):
+* SSLv3, TLS handshake, Finished (20):
+* SSL connection using ECDHE-RSA-AES128-GCM-SHA256
+* Server certificate:
+*        subject: C=US; ST=California; L=San Francisco; O=GitHub, Inc.; CN=*.github.com
+*        start date: 2014-04-08 00:00:00 GMT
+*        expire date: 2017-04-12 12:00:00 GMT
+*        subjectAltName: api.github.com matched
+*        issuer: C=US; O=DigiCert Inc; OU=www.digicert.com; CN=DigiCert SHA2 High Assurance Server CA
+*        SSL certificate verify ok.
+* STATE: PROTOCONNECT => DO handle 0x8001f218; line 1190 (connection #0)
+> POST /repos/zhanghuabin/hackathon-box-github/git/commits HTTP/1.1
+> User-Agent: curl/7.34.0
+> Host: api.github.com
+> Accept: */*
+> Authorization: token 8f9d2fb2521eb2a5316695a025906e42b65e0790
+> Content-Length: 234
+> Content-Type: application/x-www-form-urlencoded
+>
+* upload completely sent off: 234 out of 234 bytes
+* STATE: DO => DO_DONE handle 0x8001f218; line 1263 (connection #0)
+* STATE: DO_DONE => WAITPERFORM handle 0x8001f218; line 1384 (connection #0)
+* STATE: WAITPERFORM => PERFORM handle 0x8001f218; line 1395 (connection #0)
+* HTTP 1.1 or later with persistent connection, pipelining supported
+< HTTP/1.1 201 Created
+* Server GitHub.com is not blacklisted
+< Server: GitHub.com
+< Date: Fri, 30 May 2014 05:31:49 GMT
+< Content-Type: application/json; charset=utf-8
+< Status: 201 Created
+< X-RateLimit-Limit: 5000
+< X-RateLimit-Remaining: 4991
+< X-RateLimit-Reset: 1401429075
+< Cache-Control: private, max-age=60, s-maxage=60
+< ETag: "347cbdb6214bd336426bbe143b63a1f6"
+< X-OAuth-Scopes: repo, user
+< X-Accepted-OAuth-Scopes:
+< Location: https://api.github.com/repos/zhanghuabin/hackathon-box-github/git/commits/93ad087db047da2b5eb202d2b97f3336501c518c
+< Vary: Accept, Authorization, Cookie, X-GitHub-OTP
+< X-GitHub-Media-Type: github.v3
+< X-XSS-Protection: 1; mode=block
+< X-Frame-Options: deny
+< Content-Security-Policy: default-src 'none'
+< Content-Length: 1111
+< Access-Control-Allow-Credentials: true
+< Access-Control-Expose-Headers: ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+< Access-Control-Allow-Origin: *
+< X-GitHub-Request-Id: 6A785762:3D67:BB44A0A:538817C4
+< Strict-Transport-Security: max-age=31536000
+< X-Content-Type-Options: nosniff
+<
+{
+  "sha": "93ad087db047da2b5eb202d2b97f3336501c518c",
+  "url": "https://api.github.com/repos/zhanghuabin/hackathon-box-github/git/commits/93ad087db047da2b5eb202d2b97f3336501c518c",
+  "html_url": "https://github.com/zhanghuabin/hackathon-box-github/commit/93ad087db047da2b5eb202d2b97f3336501c518c",
+  "author": {
+    "name": "Huabin Zhang",
+    "email": "digitarts@gmail.com",
+    "date": "2014-05-30T05:31:30Z"
+  },
+  "committer": {
+    "name": "Huabin Zhang",
+    "email": "digitarts@gmail.com",
+    "date": "2014-05-30T05:31:30Z"
+  },
+  "tree": {
+    "sha": "37930c584534ad8301eda44bd744f026d5daf7dc",
+    "url": "https://api.github.com/repos/zhanghuabin/hackathon-box-github/git/trees/37930c584534ad8301eda44bd744f026d5daf7dc"
+  },
+  "message": "my commit message",
+  "parents": [
+    {
+      "sha": "867d6734f7bef14ded3347547af8fb1df98aca2d",
+      "url": "https://api.github.com/repos/zhanghuabin/hackathon-box-github/git/commits/867d6734f7bef14ded3347547af8fb1df98aca2d",
+      "html_url": "https://github.com/zhanghuabin/hackathon-box-github/commit/867d6734f7bef14ded3347547af8fb1df98aca2d"
+    }
+  ]
+}
+* STATE: PERFORM => DONE handle 0x8001f218; line 1565 (connection #0)
+* Connection #0 to host api.github.com left intact
+[Huabin@huabin-y510p] [Fri May 30 13:31:48] /cygdrive/e/dev/content/projects/opensource/github/zhanghuabin/hackathon-box-github
+✔  (master) $> curl -v -XPATCH -d '{"sha": "93ad087db047da2b5eb202d2b97f3336501c518c"}' -H "Authorization: token 8f9d2fb2521eb2a5316695a025906e42b65e0790" https://api.github.com/repos/zhanghuabin/hackathon-box-github/git/refs/heads/master
+* STATE: INIT => CONNECT handle 0x8001f218; line 1011 (connection #-5000)
+* Hostname was NOT found in DNS cache
+*   Trying 192.30.252.136...
+* Adding handle: conn: 0x80069d68
+* Adding handle: send: 0
+* Adding handle: recv: 0
+* Curl_addHandleToPipeline: length: 1
+* 0x8001f218 is at send pipe head!
+* - Conn 0 (0x80069d68) send_pipe: 1, recv_pipe: 0
+* STATE: CONNECT => WAITCONNECT handle 0x8001f218; line 1058 (connection #0)
+* Connected to api.github.com (192.30.252.136) port 443 (#0)
+* successfully set certificate verify locations:
+*   CAfile: /usr/ssl/certs/ca-bundle.crt
+  CApath: none
+* SSLv3, TLS handshake, Client hello (1):
+* STATE: WAITCONNECT => PROTOCONNECT handle 0x8001f218; line 1171 (connection #0)
+* SSLv3, TLS handshake, Server hello (2):
+* SSLv3, TLS handshake, CERT (11):
+* SSLv3, TLS handshake, Server key exchange (12):
+* SSLv3, TLS handshake, Server finished (14):
+* SSLv3, TLS handshake, Client key exchange (16):
+* SSLv3, TLS change cipher, Client hello (1):
+* SSLv3, TLS handshake, Finished (20):
+* SSLv3, TLS change cipher, Client hello (1):
+* SSLv3, TLS handshake, Finished (20):
+* SSL connection using ECDHE-RSA-AES128-GCM-SHA256
+* Server certificate:
+*        subject: C=US; ST=California; L=San Francisco; O=GitHub, Inc.; CN=*.github.com
+*        start date: 2014-04-08 00:00:00 GMT
+*        expire date: 2017-04-12 12:00:00 GMT
+*        subjectAltName: api.github.com matched
+*        issuer: C=US; O=DigiCert Inc; OU=www.digicert.com; CN=DigiCert SHA2 High Assurance Server CA
+*        SSL certificate verify ok.
+* STATE: PROTOCONNECT => DO handle 0x8001f218; line 1190 (connection #0)
+> PATCH /repos/zhanghuabin/hackathon-box-github/git/refs/heads/master HTTP/1.1
+> User-Agent: curl/7.34.0
+> Host: api.github.com
+> Accept: */*
+> Authorization: token 8f9d2fb2521eb2a5316695a025906e42b65e0790
+> Content-Length: 51
+> Content-Type: application/x-www-form-urlencoded
+>
+* upload completely sent off: 51 out of 51 bytes
+* STATE: DO => DO_DONE handle 0x8001f218; line 1263 (connection #0)
+* STATE: DO_DONE => WAITPERFORM handle 0x8001f218; line 1384 (connection #0)
+* STATE: WAITPERFORM => PERFORM handle 0x8001f218; line 1395 (connection #0)
+* HTTP 1.1 or later with persistent connection, pipelining supported
+< HTTP/1.1 200 OK
+* Server GitHub.com is not blacklisted
+< Server: GitHub.com
+< Date: Fri, 30 May 2014 05:39:57 GMT
+< Content-Type: application/json; charset=utf-8
+< Status: 200 OK
+< X-RateLimit-Limit: 5000
+< X-RateLimit-Remaining: 4990
+< X-RateLimit-Reset: 1401429075
+< Cache-Control: private, max-age=60, s-maxage=60
+< ETag: "1fdb99fd3def6449381325ddede4cb32"
+< X-OAuth-Scopes: repo, user
+< X-Accepted-OAuth-Scopes:
+< Vary: Accept, Authorization, Cookie, X-GitHub-OTP
+< X-GitHub-Media-Type: github.v3
+< X-XSS-Protection: 1; mode=block
+< X-Frame-Options: deny
+< Content-Security-Policy: default-src 'none'
+< Content-Length: 353
+< Access-Control-Allow-Credentials: true
+< Access-Control-Expose-Headers: ETag, Link, X-GitHub-OTP, X-RateLimit-Limit, X-RateLimit-Remaining, X-RateLimit-Reset, X-OAuth-Scopes, X-Accepted-OAuth-Scopes, X-Poll-Interval
+< Access-Control-Allow-Origin: *
+< X-GitHub-Request-Id: 6A785762:3D67:BB6F0BA:538819AD
+< Strict-Transport-Security: max-age=31536000
+< X-Content-Type-Options: nosniff
+< Vary: Accept-Encoding
+< X-Served-By: a1d8c69b807c8e21f06cad9da377d1b0
+<
+{
+  "ref": "refs/heads/master",
+  "url": "https://api.github.com/repos/zhanghuabin/hackathon-box-github/git/refs/heads/master",
+  "object": {
+    "sha": "93ad087db047da2b5eb202d2b97f3336501c518c",
+    "type": "commit",
+    "url": "https://api.github.com/repos/zhanghuabin/hackathon-box-github/git/commits/93ad087db047da2b5eb202d2b97f3336501c518c"
+  }
+}
+* STATE: PERFORM => DONE handle 0x8001f218; line 1565 (connection #0)
+* Connection #0 to host api.github.com left intact

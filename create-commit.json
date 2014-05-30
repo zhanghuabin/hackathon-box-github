@@ -1,0 +1,14 @@
+{
+  "message": "my commit message",
+  "author": {
+    "name": "Huabin Zhang",
+    "email": "digitarts@gmail.com",
+    "date": "2014-07-09T16:13:30+12:00"
+  },
+  "parents": [
+    "867d6734f7bef14ded3347547af8fb1df98aca2d"
+  ],
+  "tree": "37930c584534ad8301eda44bd744f026d5daf7dc"
+}
+
+{"message":"my commit message","author":{"name":"Huabin Zhang","email":"digitarts@gmail.com","date":"2014-07-09T16:13:30+12:00"},"parents":["867d6734f7bef14ded3347547af8fb1df98aca2d"],"tree":"37930c584534ad8301eda44bd744f026d5daf7dc"}
