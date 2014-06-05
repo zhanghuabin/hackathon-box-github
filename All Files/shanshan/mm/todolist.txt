@@ -1,0 +1,16 @@
+﻿
+
+满满  11:26:49 PM
+http://item.taobao.com/item.htm?spm=a230r.1.14.38.oI05UB&id=35512382815 还是帮我买这个黄瓶的吧  金盏花的 
+如果能赠送小样的话 小样要绿瓶的
+要250ml的吧
+
+API Explorer
+1. WADL file. 我们现在自己打算维护这些wadl，目前有些很有用的service还没有wadl,比如box, dropbox , tibb这几个。所以需要有人把这些api文档翻译成wadl。这个活其实不太难，就是需要仔细点，找个实习生应该就行。
+2. WADL web editor. 我们还需要提供一个web应用，能编辑这些wadl。这样只要api变了，我们直接修改wadl就行了。目前这些wadl都放在google app engine里， http://apidescriptor.appsp0t.com/root/apilisting.json .这个有点技术含量，需要会写点js才行。
+3. 再就是api explorer,可以找个人熟悉一下代码，以后有些容易的活也可以帮着干干。
+
+REST/JSON
+我这边在做rest2.0 的oauth server, 用的是tibco别的组的一个产品。这东西稍微有点复杂，我先自己弄着吧，不面对面估计说不清楚。
+再有就是rest的sr太多了，能找个人帮着弄弄最
+
