@@ -12,5 +12,5 @@ API Explorer
 
 REST/JSON
 我这边在做rest2.0 的oauth server, 用的是tibco别的组的一个产品。这东西稍微有点复杂，我先自己弄着吧，不面对面估计说不清楚。
-再有就是rest的sr太多了，能找个人帮着弄弄最
+再有就是rest的sr太多了，能找个
 
