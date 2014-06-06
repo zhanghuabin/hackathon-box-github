@@ -1,9 +1,3 @@
 Overview:
-This a new product
+This a new product: BOX -> GITHUB
 
-Huabin's comments:
-1. blablabla
-2. blabla
-
-aaabbb
-cccddd
