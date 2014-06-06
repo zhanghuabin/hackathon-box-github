@@ -7,3 +7,5 @@ Details:
 3. Integration
 4. Testing
 5. Doc review
+6. Misc.
+7. Etc.
