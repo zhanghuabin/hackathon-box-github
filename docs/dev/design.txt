@@ -4,3 +4,5 @@ This a new product: BOX -> GITHUB
 Details:
 1. BOX APIs
 2. GITHUB APIs
+3. Integration
+4. Testing
