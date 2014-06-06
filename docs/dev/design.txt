@@ -6,3 +6,4 @@ Details:
 2. GITHUB APIs
 3. Integration
 4. Testing
+5. Doc review
